@@ -5,7 +5,7 @@ numbers = [1, 2, 3, 4, 5]
 for n in numbers:
     print(n**2)
 # 2. Use a LIST COMPREHENSION to create a new list of even numbers only
-evenNumbers = [n for n in numbers if n%2==0];
+evenNumbers = [n for n in numbers if n%2==0]
 
 print("Even Numbers: ",evenNumbers)
 # 3. (Bonus) Use comprehension to create [4, 16, 36] from numbers (even numbers squared)
