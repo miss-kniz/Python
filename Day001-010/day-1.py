@@ -1,26 +1,67 @@
-# day-1 exercise 
-'''
-Create a calculator that can get 2 digit and perform operations on them
-'''
+# Program: Personal Profile Generator
 
+"""
+learned:
 
-'''
-What got covered
-1. data types
-2. input function
-3. type casting
-4. operators
-5. print function
-'''
+ Variables and rules
 
-a = int(input("Enter 1st number: "))
-b = int(input("Enter 2nd number: "))
+ Basic types (str, int, float, bool, None)
 
-print("\nThe value of a= ", a, "\nThe value of b= ", b)
-print("Addition", a+b)
-print("Subtraction", a-b)
-print("Division", a/b)
-print("Reminder", a%b)
-print("Multiplication", a*b)
-print("Power", a**b)
-print("Floor Division", a//b)
+ Arithmetic operators
+
+ String operations (concat, index, slice, len)
+
+ Type conversion
+
+ User input
+
+ f-strings
+"""
+
+"""
+Write a program that:
+
+Asks the user for:
+
+    First name
+
+    Last name
+
+    Birth year
+
+    Height in meters (can be decimal)
+
+    Favorite color
+
+Processes the data to display:
+
+    Full name (first + last)
+
+    Age (calculate from birth year - assume current year is 2026)
+
+    Height in centimeters (multiply by 100 - store as integer)
+
+    Initials (first letter of first name + first letter of last name)
+
+    A secret code: reverse their full name and print it
+
+    A fun fact: repeat their favorite color 5 times with spaces between
+"""
+
+first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
+birth_year = int(input("In which year you born? "))
+height = input("What's your height in meter? ")
+fav_color = input("Enter you favorite color: ")
+current_year = 2026
+
+full_name= f"{first_name} {last_name}"
+age = current_year - birth_year
+secret = full_name[::-1].lower()
+
+print(f"Full name: {full_name}")
+print(f"age: {age}")
+print(f"Height in cm: {float(height)*100}")
+print(f"Initials: {first_name[0]} {last_name[0]}")
+print(f"secret: {secret}")
+print(f"Favorite color 5 times: {(fav_color + ' ') * 5}")
